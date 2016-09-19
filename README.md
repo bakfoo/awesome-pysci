@@ -71,9 +71,9 @@ Inspired by [awesome-python](https://github.com/vinta/awesome-python).
 
 ## 分散データ処理
 
-* [blaze](http://blaze.pydata.org/) - Numpy本家のContinuum Analytics社謹製の一連の分散ライブラリコレクション．Blaze, Dask, Datashape, DyND, Odoというパッケージからなっている．そのなかの[Blaze](http://blaze.readthedocs.io/en/latest/index.html)はメモリに収まらない大きなNumpy配列を扱うことができる．
+* [Blaze](http://blaze.pydata.org/) - Numpy本家のContinuum Analytics社謹製の一連の分散ライブラリコレクション．Blaze, Dask, Datashape, DyND, Odoというパッケージからなっている．そのなかの[Blaze](http://blaze.readthedocs.io/en/latest/index.html)はメモリに収まらない大きなNumpy配列を扱うことができる．
 * [Dask](http://dask.pydata.org/en/latest/) - Numpy, pandasと同じ操作を分散・Out-of-coreにできるようにしたデータ操作・保持ライブラリ．単一マシンでも複数マシンでも処理を分散できる．マシン分散にはsshやhttpを使うdask.distributedを利用し，PySparkなどのMapReduce系のマシン環境構築よりかなりお手軽．
-* [DistArray](http://docs.enthought.com/distarray/) - Numpyと同じ操作をOut-of-coreにできるようにしたデータ操作・保持ライブラリ．マシン分散にはMPIを使ったIPython.parallelを利用する．
+* [DistArray](http://docs.enthought.com/distarray/) - Numpyと同じ操作をOut-of-coreにできるようにしたデータ操作・保持ライブラリ．マシン分散にはMPIを使ったIPython.parallel(現在のipyparallel)を利用する．
 * [PySpark](http://spark.apache.org/docs/latest/programming-guide.html) - 本家SparkのPythonインタフェース．
 * [bolt](http://bolt-project.org/docs/index.html) - PySparkとは違う，numpyフレンドリーなsparkインタフェースを実装した分散データ操作・保持ライブラリ．
 * [dpark](https://github.com/douban/dpark) - SparkのPythonクローン．分散にはMesosクラスタを利用．手続き処理風に書いてMapReduceの処理を実行することができる．
@@ -103,7 +103,7 @@ Inspired by [awesome-python](https://github.com/vinta/awesome-python).
 * [MDP](http://mdp-toolkit.sourceforge.net/index.html) - 13年以上前から開発されてきた，データ処理フレームワークに，主成分分析，因子解析などの統計解析，機械学習のアルゴリズムを実装．既にこのライブラリの役割は追えていて，scikit-learnを使うのが通常である．
 * [libsvm](http://www.csie.ntu.edu.tw/~cjlin/libsvm/) - 本家livsvmが提供するPythonインタフェースは本体に含まれている．
 * [milk](https://github.com/luispedro/milk/) - libsvmを使用したSVMやランダムフォレット，Non-negative matrix factorisationなどが使える，軽量機械学習ライブラリ．
-* [PyMVPA](https://github.com/PyMVPA/PyMVPA) - fMRIなどの巨大データを統計解析するために作られたライブラリ．[OpenFMRI.org](https://openfmri.org/)のデータセットを直説読むことができるなど，fMRIのデータ解析についよい．機械学習はscikit-learnやShogunと組み合わせる
+* [PyMVPA](https://github.com/PyMVPA/PyMVPA) - fMRIなどの巨大データを統計解析するために作られたライブラリ．[OpenFMRI.org](https://openfmri.org/)のデータセットを直説読むことができるなど，fMRIのデータ解析に強い．機械学習はscikit-learnやShogunと組み合わせる
 * [bolt](https://github.com/pprett/bolt) - SVMとロジステック回帰に特化した機械学習ライブラリ．コアの計算はC実装．古くて5年以上更新されていない．
 * [pyGPs](https://github.com/marionmari/pyGPs) - ガウス過程による回帰・判別機械学習ライブラリ．
 * [libcluster](https://github.com/dsteinberg/libcluster) - 階層ベイズによる判別問題を解く手法（変分ディリクレ過程，混合ベイズガウス過程など）を集めたライブラリ．C++実装だが，Pythonバインディングがある．
@@ -113,18 +113,19 @@ Inspired by [awesome-python](https://github.com/vinta/awesome-python).
 ## 深層学習
 
 * [Theano](https://github.com/Theano/Theano) - Bengio門下のモントリオール大謹製，深層学習ライブラリとしては老舗だが，比較的高速で現役．自動微分でも有名．
-* [Tensorflow](https://www.tensorflow.org/) - Googleが満を持して出した分散深層学習フレームワーク．この分野では一番の人気で，エコシステムが豊か．分散環境はG社のデータセンタや専用プロセッサでないと最高のパフォーマンスがでないという根本的な問題がある．
+* [Tensorflow](https://www.tensorflow.org/) - Googleが満を持して出した分散深層学習フレームワーク．この分野では一番の人気で，エコシステムが豊か．ただし，分散計算はGoogleのデータセンタや専用プロセッサでないと最高のパフォーマンスがでないという根本的な問題がある．
 * [caffe](http://caffe.berkeleyvision.org/) - 専門家以外への深層学習応用を加速したC++ライブラリ．設定ファイルとしてNNを記述する．Pythonのインタフェースがある．[Model Zoo](https://github.com/BVLC/caffe/wiki/Model-Zoo)として学習済みモデルが多数あり，他のライブラリもこの学習済みモデルのインタフェースを設けるほど．
-* [keras](https://keras.io/) - エンジンをTensorFlow, Theanoと切り替えられるインタフェース．わかりやすいネットワーク実装が売り．
-* [mxnet](http://myungjun-youn-demo.readthedocs.io/en/latest/index.html) - parameter serverで分散できることが売りの新手深層学習ライブラリ．
-* [chainer](https://github.com/pfnet/chainer) - PFNが出したネットワークを動的に組み替え可能な深層学習フレームワーク．Cudaに渡す直前までPythonなので，デバグが楽でインタラクティブにネットワークの設計を行うことができる．日本では一番使われているように思われる．
-* [Lasagne](https://github.com/Lasagne/Lasagne) - 人気があるTheanoの薄いラッパー．
-* [blocs](https://github.com/mila-udem/blocks) - 人気があるTheanoの薄いラッパー
-* [neon](https://github.com/NervanaSystems/neon)
-* [paddle](https://github.com/baidu/Paddle)
-* [tflearn](https://github.com/tflearn/tflearn)
-* [skflow](https://github.com/tensorflow/skflow) - scikit-learn風コードスタイルのTensorFlowのインタフェース．
-* [hebel](https://github.com/hannes-brt/hebel) - GPU-Accelerated Deep Learning Library in Python.
+* [chainer](https://github.com/pfnet/chainer) - [PFN](https://www.preferred-networks.jp/ja/)が出したネットワークを動的に組み替え可能な深層学習フレームワーク．Cudaに渡す直前までPythonなので，デバグが楽でインタラクティブにネットワークの設計を行うことができる．日本では一番使われているように思われる．
+* [mxnet](http://myungjun-youn-demo.readthedocs.io/en/latest/index.html) - parameter serverで分散計算ができることが売りの深層学習ライブラリ．
+* [neon](https://github.com/NervanaSystems/neon) - （Intelに買収された）[Nervana system](https://www.nervanasys.com/)の深層学習フレームワーク．現在単一マシンで最速をほこる．CUDAとのインタフェースが独自実装で，ここの部分が速いらしい．
+* [paddle](https://github.com/baidu/Paddle) - Baiduの深層学習フレームワーク．Caffe的なネットワーク設定をPythonで書いて，入力データソースと繋いで実行する．
+* [keras](https://keras.io/) - 計算エンジンをTensorFlow, Theanoと切り替えられるインタフェースライブラリ．わかりやすいネットワーク実装と簡易な記法が売り．
+* [Lasagne](https://github.com/Lasagne/Lasagne) - 人気があるTheanoの薄いラッパーライブラリ．
+* [blocs](https://github.com/mila-udem/blocks) - 人気があるTheanoの薄いラッパーライブラリ．
+* [tflearn](https://github.com/tflearn/tflearn) - scikit-learn風コードスタイルのTensorFlowのインタフェースライブラリ．同じようなライブラリに[skflow](https://github.com/tensorflow/skflow)があったが，こちらはTensorFlow本体に取り込まれた．
+* [nolearn](https://github.com/dnouri/nolearn) - Lasagneをscikit-learn風コードスタイルにしたライブラリ．TensorFlow革命の後も奇跡的にまだ開発が続いている．
+* [pylearn2](https://github.com/lisa-lab/pylearn2) - TheanoベースのBensio一門からでてきた深層学習ライブラリ．kerasの登場でほぼ死亡．クリエイターの現在の所属はTensorFlowのGoogle Brainだし．
+* [hebel](https://github.com/hannes-brt/hebel) - PyCudaの上に書かれた独自深層学習ライブラリ．一時はそれなりに人気はあったが，TensorFlowの登場により死亡．
 * [Neupy](http://neupy.com/pages/home.html) - ミニマリズムなニューラルネットライブラリ．もともと古典的なニューラルネットのライブラリをTheanoを使うことで深層学習に対応．
 
 
@@ -198,7 +199,7 @@ Inspired by [awesome-python](https://github.com/vinta/awesome-python).
 * [TextBlob](https://github.com/sloria/TextBlob) - Providing a consistent API for diving into common NLP tasks.
 * [TextGrocery](https://github.com/2shou/TextGrocery) - A simple, efficient short-text classification tool based on LibLinear and Jieba.
 * [langid.py](https://github.com/saffsd/langid.py) - Stand-alone language identification system.
-* [quepy](http://idiap.github.io/bob/) - 自然言語をsqlなどのデータベースのクエリに変換するライブラリ．
+* [quepy](http://idiap.github.io/bob/) - 自然言語をSQLなどのデータベースのクエリに変換するライブラリ．
 
 ### 日本語処理
   * [MeCab](http://taku910.github.io/mecab/) - C++実装の形態素解析エンジン．CRFを用いたパラメータ推定で判別精度が高く高速．Pythonバインディングは本体に付属している．
@@ -217,10 +218,10 @@ Inspired by [awesome-python](https://github.com/vinta/awesome-python).
   * [QuTip](http://qutip.org/) - 量子物理学系の数値シミュレーションユーティリティ
   * [astropy](http://www.astropy.org/) - 宇宙物理学・天文学のデータ可視化，統計解析，機械学習ライブラリを集めたプロジェクト．
   * [SunPy](http://sunpy.org/) - 太陽物理学のデータ可視化，解析ライブラリ．astropyベース．
-  * [gwpy]() - 重力波解析，可視化ライブラリ
-  * [yt]()
-  * [halotools]()
-  * [nbodykit]() - N体シミュレーション．
+  * [gwpy](https://gwpy.github.io/) - 重力波解析，可視化ライブラリ．重力波解析ではLIGOのツールが有名だが，それをもっと使いやすくPythonicにしている．
+  * [yt](http://yt-project.org/) - 天文学データのような大きなデータを可視化，解析する統合環境．Anaconda Pythonをカスタマイズした独自実行環境を利用する．
+  * [halotools](https://github.com/astropy/halotools) - 銀河のハローの観測結果と（ハローとダークマターを含んだ）銀河の力学モデルのN体シミュレーションの結果の整合性をみるパッケージ．astropyプロジェクトのサブプロジェクト．
+  * [nbodykit](https://github.com/bccp/nbodykit) - MPIクラスタを利用して大規模並列N体シミュレーションをするライブラリ．主にスーパーコンピュータや，並列グリッドコンピュータなどのHPC環境で利用する．
   * [PyDy](http://www.pydy.org/) - 多体力学問題計算，可視化．運動方程式はSymPyを利用する．
   * [simPEG](http://simpeg.xyz/) - 地球物理学データ可視化，解析，シミュレーションライブラリ．
   
