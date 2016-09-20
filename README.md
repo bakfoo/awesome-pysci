@@ -216,53 +216,65 @@ Inspired by [awesome-python](https://github.com/vinta/awesome-python).
 
 ### 物理学
   * [QuTip](http://qutip.org/) - 量子物理学系の数値シミュレーションユーティリティ
-  * [astropy](http://www.astropy.org/) - 宇宙物理学・天文学のデータ可視化，統計解析，機械学習ライブラリを集めたプロジェクト．
-  * [SunPy](http://sunpy.org/) - 太陽物理学のデータ可視化，解析ライブラリ．astropyベース．
-  * [gwpy](https://gwpy.github.io/) - 重力波解析，可視化ライブラリ．重力波解析ではLIGOのツールが有名だが，それをもっと使いやすくPythonicにしている．
-  * [yt](http://yt-project.org/) - 天文学データのような大きなデータを可視化，解析する統合環境．Anaconda Pythonをカスタマイズした独自実行環境を利用する．
-  * [halotools](https://github.com/astropy/halotools) - 銀河のハローの観測結果と（ハローとダークマターを含んだ）銀河の力学モデルのN体シミュレーションの結果の整合性をみるパッケージ．astropyプロジェクトのサブプロジェクト．
   * [nbodykit](https://github.com/bccp/nbodykit) - MPIクラスタを利用して大規模並列N体シミュレーションをするライブラリ．主にスーパーコンピュータや，並列グリッドコンピュータなどのHPC環境で利用する．
   * [PyDy](http://www.pydy.org/) - 多体力学問題計算，可視化．運動方程式はSymPyを利用する．
-  * [simPEG](http://simpeg.xyz/) - 地球物理学データ可視化，解析，シミュレーションライブラリ．
+  * [simPEG](http://simpeg.xyz/) - 地球物理学データの入出力，可視化，解析，シミュレーションライブラリ．
+  * [SpacePy](http://spacepy.lanl.gov/) - 空間物理学データの入出力，可視化，解析ライブラリ．
   
-### 気象学・気候学
-  * [MetPy](https://github.com/metpy/MetPy) - 気候学データ可視化，解析ライブラリ．
-  * [iris](http://scitools.org.uk/iris/docs/latest/index.html) - 気候学データ可視化，解析ライブラリ．
+### 宇宙物理学・天文学
+  * [astropy](http://www.astropy.org/) - 宇宙物理学・天文学のデータの入出力，可視化，統計解析，機械学習ライブラリを集めたプロジェクト．
+  * [SunPy](http://sunpy.org/) - 太陽物理学のデータの入出力，可視化，解析ライブラリ．astropyベース．
+  * [gwpy](https://gwpy.github.io/) - 重力波解析，可視化ライブラリ．重力波解析ではLIGOのツールが有名だが，それをもっと使いやすくPythonicにしている．
+  * [yt](http://yt-project.org/) - 天文学データのような大きなデータを入出力，可視化，解析する統合環境．Anaconda Pythonをカスタマイズした独自実行環境を利用する．
+  * [halotools](https://github.com/astropy/halotools) - 銀河のハローの観測結果と（ハローとダークマターを含んだ）銀河の力学モデルのN体シミュレーションの結果の整合性をみるパッケージ．astropyプロジェクトのサブプロジェクト．
+  * [PyRAF](http://bit.ly/py-RAF) - 天文学画像データの標準フォーマットであるIRAFの入出力インタフェース．
+
+### 気象学・海洋学・気候学
+  * [MetPy](https://github.com/metpy/MetPy) - 気象学データの入出力，可視化，解析ライブラリ．
+  * [iris](http://scitools.org.uk/iris/docs/latest/index.html) - 気象学データの入出力，可視化，解析ライブラリ．
+  * [PyNIO/PyNGL](http://pyaos.johnny-lin.com/) - 海洋データの入出力，可視化，解析ライブラリ．
+  * [ulmo](https://github.com/ulmo-dev/ulmo) - 水文学，気候学のパブリックデータへのアクセスインタフェース．
+  * [cdo-bindings](https://github.com/Try2Code/cdo-bindings) - 気候学のディファクトデータ入出力コマンド・ライブラリCDO(Climate Data Operators)のPythonバインディング．
+  
+### 地震学
+  * [obspy](https://github.com/obspy/obspy)  - 地震波データの入出力，可視化，解析をPython科学スタックで行うライブラリ．現在の主流．
+  * [pyasdf](http://seismicdata.github.io/pyasdf/) - 地震波データのフォーマットASDFを入出力するインタフェースライブラリ．obspyに取り込まれている．
+  * [Pyrocko](http://emolch.github.io/pyrocko/) - 地震波データの入出力，可視化，解析ライブラリ．今は開発が止まり，実質obspyに置き換わられた．
+  * [MSNoise](http://www.msnoise.org/)  -  Webインタフェースをもつ地震波の入出力，可視化，モニタリングライブラリ．
 
 ### 心理学実験
   * [PsychoPy](http://www.psychopy.org/index.html) - 心理学・認知心理学実験の刺激提示-データ収集ライブラリ．
 
 ### 分子生物学・バイオインフォマテックス
-  * [Biopython](http://biopython.org/wiki/Biopython) - 分子生物学・分子遺伝学分野のデータ収集・可視化，解析ライブラリ．Next Generation Sequencer興隆の今ではR/BioCunductorよりは生きづらいライブラリに…．
+  * [Biopython](http://biopython.org/wiki/Biopython) - 分子生物学・分子遺伝学分野のデータ収集・可視化，解析ライブラリ．Next Generation Sequencer(NGS)興隆の今ではR/BioCunductorよりは生きづらいライブラリに…．
   * [CRISPResso](http://crispresso.rocks/) - CRISPR/CAS9設計支援・解析ライブラリ．
-  * [bcbio-nextgen](https://github.com/chapmanb/bcbio-nextgen) - A toolkit providing best-practice pipelines for fully automated high throughput sequencing analysis.
-  * [bccb](https://github.com/chapmanb/bcbb) - Collection of useful code related to biological analysis.
+  * [bcbio-nextgen](https://github.com/chapmanb/bcbio-nextgen) - 新進気鋭のNGS対応データ収集，解析ライブラリ．NGSから出力される膨大なゲノムシーケンスデータ，その解析をマルチコアで並列実行したり，IPython parallelを利用してAWSインスタンスで並列実行する機能がある．
 
 
 ### 神経科学・脳科学
-  * [nilearn](https://github.com/nilearn/nilearn) - 神経科学データ可視化，解析，機械学習ライブラリ．scikit-learnベース．
+  * [nilearn](https://github.com/nilearn/nilearn) - 神経科学データの入出力，可視化，解析，機械学習ライブラリ．scikit-learnベース．
   * [tomopy](https://github.com/tomopy/tomopy) - X線CTなどの断層写真合成可視化ライブラリ．
-  * [NIPY](http://nipy.org) - A collection of neuroimaging toolkits.
+  * [NIPY](http://nipy.org) - ニューロイメージングのツール集．
 
 ### 化学・分子動力学・ケモインフォマテックス
   * [cclib](http://cclib.github.io/) - 計算機化学データ可視化．解析ライブラリ．
   * [RDKit](http://www.rdkit.org/) - C++実装のケモインフォマテックスの解析，機械学習ライブラリ．Pythonインタフェースを持つ．
-  * [Open Babel](http://openbabel.org/wiki/Main_Page) - A chemical toolbox designed to speak the many languages of chemical data.
+  * [PyQuante](http://pyquante.sourceforge.net/) - 量子化学
 
 ### 疫学
-  * [epipy](http://cmrivers.github.io/epipy/) フィールド疫学データ可視化ライブラリ．
+  * [epipy](http://cmrivers.github.io/epipy/) フィールド疫学データ入出力，可視化ライブラリ．
+  
+### 工学
+  * [bob](http://idiap.github.io/bob/) - CとPythonで書かれた信号処理ライブラリ．音声，静止画像，動画映像のそれぞれに対応した関数群をそろえている．SVMやEMアルゴリズム，ブースティングなどの機械学習アルゴリズムも実装されている．
+  * [python-control](https://pypi.python.org/pypi/control/0.7.0) - Matlabクローンを目指している制御工学理論ライブラリ．最近は開発が止まっている…．
+  * [scikit-aero](https://scikits.appspot.com/scikit-aero) - 航空工学
+  * [PyNE](http://pyne.io/) - 原子力工学
 
 ### 金融工学・BI
-  * [Open Mining](https://github.com/mining/mining) - Business Intelligence (BI) in Python (Pandas web interface)
-  * [zipline](https://github.com/quantopian/zipline) - A Pythonic algorithmic trading library.
+  * [Open Mining](https://github.com/mining/mining) - PythonベースのBIシステム． pandasベースで解析を行う．
+  * [zipline](https://github.com/quantopian/zipline) - アルゴリズミックトレーディングのライブラリ．イベントドリブンでトレーディングタスクを実行するため，Cythonにより高速化されている．Blaze環境で並列実行もできる．
   
-### 信号処理
-  * [bob](http://idiap.github.io/bob/) - CとPythonで書かれた信号処理ライブラリ．音声，静止画像，動画映像のそれぞれに対応した関数群をそろえている．SVMやEMアルゴリズム，ブースティングなどの機械学習アルゴリズムも実装されている．
   
-### 制御工学
-  * [python-control](https://pypi.python.org/pypi/control/0.7.0) - Matlabクローンを目指している制御工学理論ライブラリ．最近は開発が止まっている…．
-
-
 ## 数学
 
 * [Sage](http://www.sagemath.org/) - ライブラリというよりは世の中の定評ある計算機数学ライブラリ，GP/PARI, GAP, Singularなど，をCythonで統合し，Pythonインタフェースで使えるようにした計算機数学統合環境．Jupyterシェルのようなシェル，Jupyter notebookのようなWebインタフェース，クラウドコンピューティングの[SageMathCloud](https://cloud.sagemath.com/)などをエコシステムとして含んでいる．
@@ -274,7 +286,7 @@ Inspired by [awesome-python](https://github.com/vinta/awesome-python).
 * [logpy](https://github.com/logpy/logpy) - Pythonでロジックプログラミング
 
 
-## 地理空間情報
+## 地理空間情報(GIS)
 
 * [Mapnik](http://mapnik.org/) - GISデータから地図をレンダリングするエンジン．実装はC++だが，ほとんどのAPIを呼び出すことできるPythonインタフェースを持っている．
 * [GeoPandas](http://geopandas.org/) - pandasのGeo版．測地情報を直接操作できる．
@@ -282,7 +294,9 @@ Inspired by [awesome-python](https://github.com/vinta/awesome-python).
 * [GDAL](http://www.gdal.org/) - ラスターデータフォーマットのメタデータの検索や、データフォーマットの変換を行うライブラリ．Pythonバインディングがある．
 * [OGR](http://gdal.org/1.11/ogr/) - 地理空間ベクターデータ（シェープファイルなど）のメタデータの検索や、データフォーマットの変換を行うライブラリ．Pythonバインディングがある．GDALの一部である．
 * [Shapely](https://github.com/Toblerity/Shapely) - 空間オブジェクトを幾何学的に操作したり，幾何学的性質を調べたりするライブラリ．広く使われているGEOSのPythonポーティング．
-* [pysal](http://pysal.readthedocs.io/en/latest/index.html) - 地理空間データの可視化，解析ライブラリ．
+* [pysal](http://pysal.readthedocs.io/en/latest/index.html) - 地理空間データの入出力，可視化，解析ライブラリ．
+* [OSGeo](http://bit.ly/osgeo-lib) - GISデータの入出力と解析
+* [Basemap](http://matplotlib.org/basemap/) - 測地情報の2Dマッピング
 * [GeoDjango](https://docs.djangoproject.com/en/dev/ref/contrib/gis/) - Djangoベースのジオサーバ．よく使われるC++実装の[MapServer](https://github.com/mapserver/mapserver)やJava実装の[GeoServer](https://github.com/geoserver/geoserver)と同じジオサーバのPython版．
 * [geojson](https://github.com/frewsxcv/python-geojson) - GeoJsonを扱うライブラリ．
 * [geopy](https://github.com/geopy/geopy) - 住所と測地情報（緯度経度）を結びつけるジオコーディングを行うライブラリ．
@@ -293,8 +307,8 @@ Inspired by [awesome-python](https://github.com/vinta/awesome-python).
 
 ## コンピュータビジョン
 
-* [OpenCV](http://opencv.org/) - Open Source Computer Vision Library.
-* [SimpleCV](http://simplecv.org/) - An open source framework for building computer vision applications.
+* [OpenCV](http://opencv.org/) - 最も有名なオープンソースのコンピュータビジョンフレームワーク．巨大なフレームワークで，画像変換，画像解析から機械学習までなんでも揃う．しかし，丸一日以上かけてビルドする羽目になることが多くて，いつもビルドに苦労する．
+* [SimpleCV](http://simplecv.org/) - OpenCVベースのコンピュータビジョンフレームワークで，OpenCVよりPythonicにコードを書くことができる．このフレームワークもOpenCVとこのフレームワークが使うライブラリの整合性がかなりピーキーで，OpenCVより更にビルドが地獄．
 
 
 
@@ -310,12 +324,11 @@ Inspired by [awesome-python](https://github.com/vinta/awesome-python).
 * [ggplot](https://github.com/yhat/ggplot) - Rのggplot2のサブクローン．
 * [plotly](https://plot.ly) プロットWebサービスとの連携を視野に置いた，インタラクティブなプロットライブラリ．
 * [seaborn](http://web.stanford.edu/~mwaskom/software/seaborn/) - matplotlibベースにグラフ種類の増加と審美的な改善を図った野心的プロットライブラリ
+* [vincent](https://github.com/wrobstory/vincent) - A Python to Vega translator.
 * [pygal](http://www.pygal.org/en/latest/) - A Python SVG Charts Creator.
 * [pygraphviz](https://pypi.python.org/pypi/pygraphviz) - Python interface to [Graphviz](http://www.graphviz.org/).
 * [PyQtGraph](http://www.pyqtgraph.org/) - Interactive and realtime 2D/3D/Image plotting and science/engineering widgets.
 * [SnakeViz](http://jiffyclub.github.io/snakeviz/) - A browser based graphical viewer for the output of Python's cProfile module.
-* [seaborn](https://github.com/mwaskom/seaborn) - Statistical data visualization using matplotlib.
-* [vincent](https://github.com/wrobstory/vincent) - A Python to Vega translator.
 * [VisPy](http://vispy.org/) - High-performance scientific visualization based on OpenGL.
 
 
