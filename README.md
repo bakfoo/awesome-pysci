@@ -174,7 +174,7 @@ Inspired by [awesome-python](https://github.com/vinta/awesome-python).
 * [FEniCS](https://fenicsproject.org/download/) - かなり多くの偏微分方程式に対応したソルバー．多くのソルバーがほぼ開発を止めたり速度を落とす中，未だに開発が継続されている．偏微分方程式ソルバー界の不死鳥．コアの実装はC++．
 
 ### グラフ理論
-* [APGL]（https://github.com/charanpald/APGL） - グラフ解析のためのグラフライブラリ．有向グラフ，無向グラフ，マルチグラフに対応．
+* [APGL](https://github.com/charanpald/APGL) - グラフ解析のためのグラフライブラリ．有向グラフ，無向グラフ，マルチグラフに対応．
 * [graphillion](https://github.com/takemaru/graphillion) - 巨大グラフ，グラフ集合に対する，検索・最適化及び列挙を扱うためのグラフライブラリ．超高速なグラフ検索と列挙を特徴としている．
 
 ### Matrix Factorization
