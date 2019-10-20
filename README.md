@@ -142,8 +142,8 @@ Inspired by [awesome-python](https://github.com/vinta/awesome-python).
 
 
 ## 時系列解析
-* [pyflux](http://www.pyflux.com/) - 時系列解析統合環境．Pythonの時系列解析ライブラリでは一番充実している．
-* [cesium](http://cesium.ml/) - 主に脳波データ(EEG)の時系列データの特化した時系列解析・機械学習ライブラリ．実装されている機械学習の手法は回帰とランダムフォレスト．FFT/Wavelet法などの時間周波数解析は視野に入れてない．
+* [pyflux](https://pyflux.readthedocs.io/) - 時系列解析統合環境．Pythonの時系列解析ライブラリでは一番充実している．(公式サイトアクセス不能につき暫定的に変更)
+* [cesium](http://cesium-ml.org/) - 主に脳波データ(EEG)の時系列データの特化した時系列解析・機械学習ライブラリ．実装されている機械学習の手法は回帰とランダムフォレスト．FFT/Wavelet法などの時間周波数解析は視野に入れてない．
 
 ### カルマンフィルタ
   * [pyKalman](https://github.com/pykalman/pykalman) EMアルゴリズムによるカルマンフィルタのPython実装．
