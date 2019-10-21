@@ -144,6 +144,7 @@ Inspired by [awesome-python](https://github.com/vinta/awesome-python).
 ## 時系列解析
 * [pyflux](https://pyflux.readthedocs.io/) - 時系列解析統合環境．Pythonの時系列解析ライブラリでは一番充実している．(公式サイトアクセス不能につき暫定的に変更)
 * [cesium](http://cesium-ml.org/) - 主に脳波データ(EEG)の時系列データの特化した時系列解析・機械学習ライブラリ．実装されている機械学習の手法は回帰とランダムフォレスト．FFT/Wavelet法などの時間周波数解析は視野に入れてない．
+* [gluonts](https://gluon-ts.mxnet.io/) - Amazon の研究者達が、深層学習をベースにした時系列モデルの構築、評価、比較のために開発した、Python のツールキット
 
 ### カルマンフィルタ
   * [pyKalman](https://github.com/pykalman/pykalman) EMアルゴリズムによるカルマンフィルタのPython実装．
@@ -167,6 +168,9 @@ Inspired by [awesome-python](https://github.com/vinta/awesome-python).
 * [OpenOpt](https://pypi.python.org/pypi/openopt) - 数々のソルバーと接続可能な数理最適化モデラー．主に非線形最適化問題に用いることが多い．myopenoptというPythonラッパーを利用してアクセスする．よくホームページが落ちているので心配になる．
 * [PuLP](https://pypi.python.org/pypi/PuLP) -  数々のソルバーと接続可能な数理最適化モデラー．混合整数最適化モデリング（線形最適化問題，整数最適化問題に使う）を行う．mypulpというPythonラッパーを利用してアクセスする．
 * [Pymo](http://www.pyomo.org/) - 数々のソルバーと接続可能な数理最適化モデラー．オブジェクト指向風にモデリングする．以前として活発に開発が続いている．
+
+### 統計的因果探索
+*[CDT](https://diviyan-kalainathan.github.io/CausalDiscoveryToolbox/html/index.html) - 統計的因果探索を行うためのパッケージ.
 
 ### 方程式ソルバー
 * [SfePy](http://sfepy.org/doc-devel/index.html) - 有限要素法による偏微方程式のソルバー．1次元，2次元，3次元を扱う．
